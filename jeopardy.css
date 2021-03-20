@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+  }
+
+.center {
+	text-align: center;
+	border: 3px solid grey
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    margin: auto;
+    text-align: left !important;
+}
+
+.col {
+    padding: 1em;
+    border: 4px grey;
+    margin: 2em;
+}
+
+.leftcol {
+    float: left;
+    flex-basis: 17%;
+
+}
+
+.rightcol {
+    float: right;
+    flex-basis: 83%;
+} 
