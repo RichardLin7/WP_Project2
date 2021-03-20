@@ -12,13 +12,13 @@
     display: flex;
     justify-content: center !important;
     margin: auto;
-    text-align: left !important;
+    text-align: center !important;
 }
 
 .col {
     padding: 1em;
-    border: 4px grey;
-    margin: 2em;
+    border: 4px solid grey;
+    margin: 1em;
 }
 
 .leftcol {
@@ -31,3 +31,15 @@
     float: right;
     flex-basis: 83%;
 } 
+
+table{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	width: 100px;
+	height: 125px;
+	border: 1px solid black;
+}
