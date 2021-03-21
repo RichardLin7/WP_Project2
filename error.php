@@ -6,18 +6,18 @@
 	</head>
 	<body>
 		<?php session_start(); ?>
-		<div class="topnav">
-        	<a class="active" href="index.php">Home</a>
-        	<a href="signup.php">Register</a>
-        	<a href="login.php">Login</a>
-        	<a href="about.php">About Us</a>
+		  <div class="topnav">
+        <a class="active" href="index.php">Home</a>
+        <a href="signup.php">Register</a>
+        <a href="login.php">Login</a>
+        <a href="about.php">About Us</a>
         </div>
 		<br>
         <br>
      <div id = 'box'>
-    	<fieldset>
+    <fieldset>
         <legend>Error: <?=$_COOKIE['prev'];?> </legend>
-        <form action= '<?=$_SESSION['backpage']?>' method="post" enctype="multipart/form-data">
+        <form action= '<?=$_COOKIE['backpage']?>' method="post" enctype="multipart/form-data">
         <div id = 'line'><label><?=errors();?></label><br><br>
         <input type="submit" value="Back"/>
 	</fieldset>	

@@ -52,7 +52,7 @@
          $error = false;
 		$req = array('name','verify','type','pw');
         $errtype = "empty field";
-        $_SESSION["backpage"] = "signup.php";
+         setcookie('backpage', "signup.php", time() + (86400 * 30), "/");
 		foreach($req as $field){
 		if(!$error && !isset($_POST[$field])){ $error = true;}
         elseif (empty($_POST[$field])) {$error = true;}
@@ -118,7 +118,7 @@
 
         fwrite($single,$newuser);
         fclose($single);
-        $_SESSION['name'] = $_POST['name'];
+        setcookie('name',$_POST['name'],time() + (86400 * 30), "/"); 
         return $_POST['name'];
       }
 

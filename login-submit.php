@@ -2,7 +2,7 @@
 <html lang="en">
 	<head><meta charset="UTF-8">
 		<title>Sign up success</title>
-		<link href="http://codd.cs.gsu.edu/~yyang49/jeopardy/main.css" type="text/css" rel="stylesheet" />
+		<link href="./jeopardy.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	<body>
@@ -50,10 +50,8 @@
 	<?php
   function directl(){
     if(!isset($_COOKIE['user'])){
-      echo "step1";
       return login();}
     elseif(empty($_COOKIE['user'])){
-      echo "step2";
       return login();}
     else{ return $_COOKIE['user'];
      // if(!isset($_POST['logintype'])){return login();}
@@ -65,9 +63,9 @@
 
 	function login(){
          $error = false;
-		$req = array('name','verify','type','pw');
+		    $req = array('name','verify','type','pw');
         $errtype = "empty field";
-        $_SESSION["backpage"] = "login.php";
+        setcookie('backpage', "login.php", time() + (86400 * 30), "/");
 		foreach($req as $field){
 		if(!$error && !isset($_POST[$field])){ $error = true;}
         elseif (empty($_POST[$field])) {$error = true;}

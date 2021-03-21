@@ -60,8 +60,8 @@
 	function directlogin(){
 		if(!isset($_POST['logintype'])){return;}
 			elseif(empty($_POST['logintype'])){return;}
-        $_SESSION['directlogin'] = true;
-       setcookie('user',  $_SESSION['name'], time() + (86400 * 30), "/");
+		setcookie('directlogin',true,time() + (86400 * 30), "/");	
+       setcookie('user',  $_COOKIE['name'], time() + (86400 * 30), "/");
       header("Location: login-submit.php");
         exit();
 	}
