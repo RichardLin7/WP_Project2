@@ -1,10 +1,13 @@
 * {
 	box-sizing: border-box;
+	font-size: 12pt;
+	font-family: "Verdana", "Geneva", sans-serif;
   }
 
 .center {
 	text-align: center;
-	border: 3px solid grey
+	border: 3px solid grey;
+	background-color: white;
 }
 
 .columns {
@@ -24,12 +27,13 @@
 .leftcol {
     float: left;
     flex-basis: 17%;
-
+	background-color: white;
 }
 
 .rightcol {
     float: right;
     flex-basis: 83%;
+	background-color: white;
 } 
 
 table{
@@ -54,4 +58,117 @@ button {
 }
 button:hover {
     cursor: pointer;
+}
+
+a {
+	color: #F44;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #FFA;
+}
+
+a img {
+	border: none;
+}
+
+div {
+	overflow: hidden;
+}
+
+body {
+	background-image: url('http://codd.cs.gsu.edu/~yyang49/jeopardy/3_s37_logo.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed; 
+}
+
+/* form styles */
+fieldset {
+	background-color: #AEE9F0;
+	border: 2px outset gray;
+	border-radius: 30px;
+	box-shadow: inset 0 0 15px 6px #FFFFFF;
+}
+
+/* the bold text labels to the left of each form field */
+fieldset strong,
+ul strong,
+fieldset label.left,
+fieldset .column {
+	float: left;
+	width: 11em;
+	padding-top: 5px;
+}
+
+div#box {
+	display: inline-block;
+	width: 40%;
+	margin-left: 30%;
+	text-align: center;
+	margin-top: 20%;
+	margin-bottom: 30%;
+}
+
+div#line{
+	display:inline-block;
+}
+
+div#w3c{
+  position:absolute;
+    bottom:0;
+    right:0;
+}
+
+input[type="submit"] {
+	background-color: rgba(255,255,255,0.5);
+	font-size: 120%;
+	font-weight: bold;
+	padding: 3%;
+	border-radius: 30px;
+}
+
+legend {
+	background-color: rgba(255,255,255,1);
+	border: 2px outset gray;
+	padding: 0.2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	display: inline-block;
+	text-align: center;
+	border-radius: 15px;
+	width: 50%;
+	box-shadow: inset 0px 0px 18px #AEE9F0;
+	margin-bottom: 1em;
+}
+
+.topnav {
+  background-color: rgba(48,48,48,0.8);
+  overflow: hidden;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
 }
