@@ -6,7 +6,8 @@
     </head>
     <body>
         <?php 
-            $name = $_POST["name"]; // used to display who's turn it is
+            $name = $_COOKIE["user"];
+            $turn = $_POST["name"]; // used to display who's turn it is
             $player1 = $_POST["player1"]; // variables subject to change for leaderboard
             $player2 = $_POST["player2"]; // variables subject to change for leaderboard
             $player3 = $_POST["player3"]; // variables subject to change for leaderboard
@@ -25,7 +26,7 @@
             <!-- Leader Board -->
             <div class="leftcol col">
                 <p>
-                    It's <?php print $name ?> turn!
+                    It's <?php print $turn ?> turn!
                     </br>
                     _________________________
                 </p>
