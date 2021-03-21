@@ -43,3 +43,15 @@ th, td {
 	height: 125px;
 	border: 1px solid black;
 }
+
+button {
+    border: 0;
+    padding: 0;
+    display: inline;
+    background: none;
+    text-decoration: underline;
+    color: blue;
+}
+button:hover {
+    cursor: pointer;
+}

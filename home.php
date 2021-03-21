@@ -5,7 +5,15 @@
         <link rel="stylesheet" href="./jeopardy.css"/>
     </head>
     <body>
-        <?php $name = $_POST["name"];?>
+        <?php 
+            $name = $_POST["name"]; // used to display who's turn it is
+            $player1 = $_POST["player1"]; // variables subject to change for leaderboard
+            $player2 = $_POST["player2"]; // variables subject to change for leaderboard
+            $player3 = $_POST["player3"]; // variables subject to change for leaderboard
+            $player4 = $_POST["player4"]; // variables subject to change for leaderboard
+
+
+        ?>
 
         <div class="center">
             <h1>WEB PROGRAMMING JEOPARDY</h1>
@@ -26,50 +34,127 @@
   
             <!-- Question Board -->
             <div class="rightcol col">
-            <table>
-                <tr>
-                    <th>Random Subjects</th> 
-                    <th>Computer Science</th>
-                    <th>Memes</th>
-                    <th>Big Brain Questions</th>
-                    <th>Smol Brain Questions</th>    
-                </tr>
-                <tr>
-                    <td><a href = "scene1.html">100</a></td>
-                    <td><a href = "scene1.html">100</a></td>
-                    <td><a href = "scene1.html">100</a></td>
-                    <td><a href = "scene1.html">100</a></td>
-                    <td><a href = "scene1.html">100</a></td> 
-                </tr>
-                <tr>
-                    <td><a href = "scene1.html">200</a></td>
-                    <td><a href = "scene1.html">200</a></td>
-                    <td><a href = "scene1.html">200</a></td>
-                    <td><a href = "scene1.html">200</a></td>
-                    <td><a href = "scene1.html">200</a></td>
-                </tr>
-                <tr>
-                    <td><a href = "scene1.html">300</a></td>
-                    <td><a href = "scene1.html">300</a></td>
-                    <td><a href = "scene1.html">300</a></td>
-                    <td><a href = "scene1.html">300</a></td>
-                    <td><a href = "scene1.html">300</a></td>
-                </tr>
-                <tr>
-                    <td><a href = "scene1.html">400</a></td>
-                    <td><a href = "scene1.html">400</a></td>
-                    <td><a href = "scene1.html">400</a></td>
-                    <td><a href = "scene1.html">400</a></td>
-                    <td><a href = "scene1.html">400</a></td>
-                </tr>
-                <tr>
-                    <td><a href = "scene1.html">500</a></td>
-                    <td><a href = "scene1.html">500</a></td>
-                    <td><a href = "scene1.html">500</a></td>
-                    <td><a href = "scene1.html">500</a></td>
-                    <td><a href = "scene1.html">500</a></td>
-                </tr>
-            </table>
+                <form action="./questions.php" method="post">
+                    <table>
+                        <tr>
+                            <th>Random Subjects</th> 
+                            <th>Computer Science</th>
+                            <th>Memes</th>
+                            <th>Big Brain Questions</th>
+                            <th>Smol Brain Questions</th>    
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="100" />
+                                <button>100</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Computer Science" points="100" />
+                                <button>100</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="100" />
+                                <button>100</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="100" />
+                                <button>100</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="100" />
+                                <button>100</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="200" />
+                                <button>200</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="200" />
+                                <button>200</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="200" />
+                                <button>200</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="200" />
+                                <button>200</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="200" />
+                                <button>200</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="300" />
+                                <button>300</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="300" />
+                                <button>300</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="300" />
+                                <button>300</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="300" />
+                                <button>300</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="300" />
+                                <button>300</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="400" />
+                                <button>400</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="400" />
+                                <button>400</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="400" />
+                                <button>400</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="400" />
+                                <button>400</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="400" />
+                                <button>400</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="500" />
+                                <button>500</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="500" />
+                                <button>500</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="500" />
+                                <button>500</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="500" />
+                                <button>500</button>
+                            </td>
+                            <td>
+                                <input type="hidden" cname="Random subjects" points="500" />
+                                <button>500</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
             </div>
         </div>
     </body>
