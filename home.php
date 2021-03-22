@@ -38,127 +38,130 @@
   
             <!-- Question Board -->
             <div class="rightcol col">
-                <form action="./questions.php" method="post">
-                    <table>
-                        <tr>
-                            <th>Random Subjects</th> 
-                            <th>Computer Science</th>
-                            <th>Memes</th>
-                            <th>Big Brain Questions</th>
-                            <th>Smol Brain Questions</th>    
+                <table>
+                  <tr>
+                    <th>Math</th> 
+                    <th>Computer Science</th>
+                    <th>History</th>
+                    <th>Pop Culture</th>
+                    <th>Animals</th>    
+                  </tr>
+                  <tr>
+                    <td>
+                        <form action="./questions.php" method="post">
+                            <input type="hidden" name="points" value="100"/>
+                            <input type="hidden" name="subject" value="math100"/>
+                            <button type="submit" value="Submit">100</button>
+                        </form>                                
+                    </td>
+                    <td>
+                      <input type="radio" name="subject" value="computerscience100"/>
+                      <label for="100">100</label>                               
+                    </td>
+                    <td>
+                      <input type="radio" name="subject" value="history100"/>
+                      <label for="100">100</label>
+                                
+                    </td>
+                    <td>
+                      <input type="radio" name="subject" value="popculture100"/>
+                      <label for="100">100</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="animals100"/>
+                      <label for="100">100</label>
+                    </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="100" />
-                                <button>100</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Computer Science" points="100" />
-                                <button>100</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="100" />
-                                <button>100</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="100" />
-                                <button>100</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="100" />
-                                <button>100</button>
-                            </td>
+                    <td>
+                      <input type="radio" name="subject"  value="math200"/>
+                      <label for="200">200</label>
+                                
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="computerscience200"/>
+                      <label for="200">200</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="history200"/>
+                      <label for="200">200</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="popculture200"/>
+                      <label for="200">200</label>                               
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="animals200"/>
+                      <label for="200">200</label>                                
+                    </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="200" />
-                                <button>200</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="200" />
-                                <button>200</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="200" />
-                                <button>200</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="200" />
-                                <button>200</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="200" />
-                                <button>200</button>
-                            </td>
+                    <td>
+                      <input type="radio" name="subject"  value="math300"/>
+                      <label for="300">300</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="computerscience300"/>
+                      <label for="300">300</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="history300"/>
+                      <label for="300">300</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="popculture300"/>
+                      <label for="300">300</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="animals300"/>
+                      <label for="300">300</label>
+                    </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="300" />
-                                <button>300</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="300" />
-                                <button>300</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="300" />
-                                <button>300</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="300" />
-                                <button>300</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="300" />
-                                <button>300</button>
-                            </td>
+                    <td>
+                      <input type="radio" name="subject"  value="math400"/>
+                      <label for="400">400</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="computerscience400"/>
+                      <label for="400">400</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="history400"/>
+                      <label for="400">400</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="popculture400"/>
+                      <label for="400">400</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="animals400"/>
+                      <label for="400">400</label>
+                    </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="400" />
-                                <button>400</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="400" />
-                                <button>400</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="400" />
-                                <button>400</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="400" />
-                                <button>400</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="400" />
-                                <button>400</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="500" />
-                                <button>500</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="500" />
-                                <button>500</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="500" />
-                                <button>500</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="500" />
-                                <button>500</button>
-                            </td>
-                            <td>
-                                <input type="hidden" cname="Random subjects" points="500" />
-                                <button>500</button>
-                            </td>
+                    <td>
+                      <input type="radio" name="subject"  value="math500"/>
+                      <label for="500">500</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="computerscience500"/>
+                      <label for="500">500</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="history500"/>
+                      <label for="500">500</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="popculture500"/>
+                      <label for="500">500</label>
+                    </td>
+                    <td>
+                      <input type="radio" name="subject"  value="animals500"/>
+                      <label for="500">500</label>
+                    </td>
                         </tr>
                     </table>
-                </form>
             </div>
         </div>
     </body>
