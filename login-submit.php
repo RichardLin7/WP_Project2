@@ -9,7 +9,7 @@
         <?php session_start(); ?>
 		  <div class="topnav">
         <a class="active" href="index.php">Home</a>
-        <a href="home.php">Play</a>
+        <a href="index.php">Play</a>
         <a href="logout.php">Log out</a>
         <a href="about.php">About Us</a>
         </div>
@@ -19,7 +19,7 @@
 
 
 	 <div id = 'box'>
-        <form action="home.php" method="post" enctype="multipart/form-data">
+        <form action="index.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>Welcome!</legend>
                 <label>Player <?=directl();?></label>

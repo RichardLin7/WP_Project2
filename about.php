@@ -20,7 +20,7 @@
      <div id = 'box2'>
      	<img src = 'home.jpg' alt = 'hj'/> <br> <br>
 		<fieldset>
-	    <legend>Team Web Jeopardizers</legend>
+	    <legend>Team: Weeb Jeopardizers</legend>
         <strong>Richard(Leader): </strong>Programmer in charge of Implementation of Jeopardy Logic, UI <br><br>
         <strong>Yuhan: </strong>Programmer in charge of logins, cookies/sessions, UI<br><br>
         <strong>Evgenigy: </strong>Programmer in charge of Form processing, Leader board for users<br><br>
