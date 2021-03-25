@@ -17,21 +17,16 @@
 		<br>
         <br>
       
-      
-
-
-
-
 	 <div id = 'box'>
         <form action="login.php" method="post" enctype="multipart/form-data">
             <fieldset>
-                <legend>Welcome!</legend>
-                <label>Your Username: <?=signup()?></label>
-                <br><br>
-                <label>Your <?=gettype1()?>: <?=$_POST['verify']?> </label>
-                <br><br>
-      <button name="logintype" class ='button' type="submit" value="login1">Login this account</button>
-      <button name="logintype" class ='button' type="submit" value="login2">Login other account</button>
+               <legend>Welcome!</legend>
+               <label>Your Username: <?=signup()?></label>
+               <br><br>
+               <label>Your <?=gettype1()?>: <?=$_POST['verify']?> </label>
+               <br><br>
+               <button name="logintype" class ='button' type="submit" value="login1">Login this account</button>
+               <button name="logintype" class ='button' type="submit" value="login2">Login other account</button>
             </fieldset>
         </form>
         </div>	

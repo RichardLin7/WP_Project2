@@ -6,8 +6,16 @@
 	</head>
 	
 	<body>
-        <?php session_start(); ?>
-		  <div class="topnav">
+        <?php 
+        session_start();         
+        setcookie("player1", 0, time() + (3600 * 30), "/");
+        setcookie("player2", 0, time() + (3600 * 30), "/");
+        setcookie("player3", 0, time() + (3600 * 30), "/");
+        setcookie("player4", 0, time() + (3600 * 30), "/");
+        setcookie("points", 0, time() + (3600 * 30), "/");
+        setcookie("currentplayer", "player1", time() + (3600 * 30), "/");
+        ?>
+		    <div class="topnav">
         <a class="active" href="index.php">Home</a>
         <a href="index.php">Play</a>
         <a href="logout.php">Log out</a>
@@ -24,21 +32,23 @@
                 <legend>Welcome!</legend>
                 <label>Player <?=directl();?></label>
                 <br><br>
-                <label>Are you ready?</label>
+                <p>
+                  This is a 4 player Jeopardy Game.
+                </p>
                 <br><br>
-            <strong><label for="section">Number of players</label><br></strong>
+                <label>Are you ready?</label>
+            <!-- <strong><label for="section">Number of players</label><br></strong>
             <select name="section" id="section">
                  <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-             </select><br><br>
+             </select><br><br> -->
                 <input type="submit" value="GO!"/>
             </fieldset>
         </form>
         </div>	
-		
-<div id='w3c'>
-         <a href="https://validator.w3.org/">
+        <div id='w3c'>
+        <a href="https://validator.w3.org/">
         <img src='http://codd.cs.gsu.edu/~yyang49/hw3/icons/html.png' alt = 'h5'/></a>
         <a href = "https://jigsaw.w3.org/css-validator/">
         <img src='http://codd.cs.gsu.edu/~yyang49/hw3/icons/css.png' alt = 'css'/></a>
@@ -101,7 +111,6 @@
                }
                break;
         }}
-        
          if($error)
         {
         setcookie('prev', $errtype, time() + (86400 * 30), "/");

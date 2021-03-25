@@ -41,8 +41,6 @@
              <label for="pw">Password:</label></strong>
 			 <input type="password" id="pw" name="pw" maxlength="12" size="12" required>
 	          </div><br><br>
-         
-
 	    <input type="submit" value="Login"/>
 
 	    </fieldset>
@@ -60,9 +58,10 @@
 	function directlogin(){
 		if(!isset($_POST['logintype'])){return;}
 			elseif(empty($_POST['logintype'])){return;}
+
 		setcookie('directlogin',true,time() + (86400 * 30), "/");	
-       setcookie('user',  $_COOKIE['name'], time() + (86400 * 30), "/");
-      header("Location: login-submit.php");
+       	setcookie('user',  $_COOKIE['name'], time() + (86400 * 30), "/");
+      	header("Location: login-submit.php");
         exit();
 	}
 
