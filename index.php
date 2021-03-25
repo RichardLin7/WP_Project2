@@ -5,46 +5,6 @@
     <link rel="stylesheet" href="./jeopardy.css"/>
   </head>
   <body>
-    <?php 
-      if (!isset($_COOKIE["player1"])) {
-        // Game Cookies
-        setcookie("player1", 0, time() + (3600 * 30), "/");
-        setcookie("player2", 0, time() + (3600 * 30), "/");
-        setcookie("player3", 0, time() + (3600 * 30), "/");
-        setcookie("player4", 0, time() + (3600 * 30), "/");
-        setcookie("points", 0, time() + (3600 * 30), "/");
-        setcookie("used", 0, time() + (86400 * 30), "/");
-        setcookie("currentplayer", "player1", time() + (3600 * 30), "/");
-
-        // Question Cookies
-        setcookie("math100", 0, time() + (86400 * 30), "/");
-        setcookie("math200", 0, time() + (86400 * 30), "/");
-        setcookie("math300", 0, time() + (86400 * 30), "/");
-        setcookie("math400", 0, time() + (86400 * 30), "/");
-        setcookie("math500", 0, time() + (86400 * 30), "/");
-        setcookie("computerscience100", 0, time() + (86400 * 30), "/");
-        setcookie("computerscience200", 0, time() + (86400 * 30), "/");
-        setcookie("computerscience300", 0, time() + (86400 * 30), "/");
-        setcookie("computerscience400", 0, time() + (86400 * 30), "/");
-        setcookie("computerscience500", 0, time() + (86400 * 30), "/");
-        setcookie("history100", 0, time() + (86400 * 30), "/");
-        setcookie("history200", 0, time() + (86400 * 30), "/");
-        setcookie("history300", 0, time() + (86400 * 30), "/");
-        setcookie("history400", 0, time() + (86400 * 30), "/");
-        setcookie("history500", 0, time() + (86400 * 30), "/");
-        setcookie("popculture100", 0, time() + (86400 * 30), "/");
-        setcookie("popculture200", 0, time() + (86400 * 30), "/");
-        setcookie("popculture300", 0, time() + (86400 * 30), "/");
-        setcookie("popculture400", 0, time() + (86400 * 30), "/");
-        setcookie("popculture500", 0, time() + (86400 * 30), "/");
-        setcookie("animals100", 0, time() + (86400 * 30), "/");
-        setcookie("animals200", 0, time() + (86400 * 30), "/");
-        setcookie("animals300", 0, time() + (86400 * 30), "/");
-        setcookie("animals400", 0, time() + (86400 * 30), "/");
-        setcookie("animals500", 0, time() + (86400 * 30), "/");
-      }
-
-    ?>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
             <a href="signup.php">Register</a>
