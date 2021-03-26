@@ -47,7 +47,7 @@
 	   if(!$logins){
            $array = array("Register", "Login","signup.php","login.php");
 	   }else{
-           $array = array("Play", "Log out", "home.php", "logout.php");
+           $array = array("Play", "Log out", "index.php", "logout.php");
 	   } 
 	   return $array;
 	}
