@@ -20,8 +20,18 @@
             <!-- Question Board -->
             <div class="rightcol col">
                 <?php
-
-
+                $login = false;
+                if(isset($_COOKIE['user'])){
+                  if(!empty($_COOKIE['user'])){
+                 $login = true;
+                 }
+                 }
+                if(!$login){
+                    setcookie('backpage', "login.php", time() + (86400 * 30), "/");
+                    setcookie('prev', "not login", time() + (86400 * 30), "/");
+                    header("Location: error.php");
+                    exit();
+                }
                 $file = "./questions.txt";
                 $contents = file_get_contents($file);
                 $subject = $_POST["subject"];

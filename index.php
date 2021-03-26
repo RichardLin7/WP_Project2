@@ -15,20 +15,21 @@
             <h1>WEB PROGRAMMING JEOPARDY</h1>
         </div>
         <div class="columns">
+          <?php 
+          error_reporting(E_ALL ^ E_WARNING); 
+          $login = loginstat();
+          ?>
             <!-- Leader Board -->
             <div class="leftcol col">
                 <p>
-                    It's <?php echo $_COOKIE["currentplayer"]."'s"; ?> turn!
+                    It's <?=leaderboard1($login)?>'s turn!
                     </br>
                     _________________________
                 </p>
                 <h3>Leaderboard</h3>
                 <p>
                     <?php
-                      echo "Player 1: ".$_COOKIE["player1"];
-                      echo "<br>Player 2: ".$_COOKIE["player2"];
-                      echo "<br>Player 3: ".$_COOKIE["player3"];
-                      echo "<br>Player 4: ".$_COOKIE["player4"];
+                      leaderboard2($login);
                     ?>
                 </p>
             </div>
@@ -162,4 +163,37 @@
             </div>
         </div>
     </body>
+
+
+    <?php
+    function loginstat(){
+      $login = false;
+      if(isset($_COOKIE['user'])){
+        if(!empty($_COOKIE['user'])){
+          $login = true;
+        }
+      }
+      return $login;
+    }
+
+    function leaderboard1($login){
+      if($login){
+        return $_COOKIE["currentplayer"];
+      }
+      else{
+        return 'Unknown user';
+      }
+    }
+
+    function leaderboard2($login){ 
+      if($login){
+        echo "Player 1: ".$_COOKIE["player1"];
+        echo "<br>Player 2: ".$_COOKIE["player2"];
+        echo "<br>Player 3: ".$_COOKIE["player3"];
+        echo "<br>Player 4: ".$_COOKIE["player4"];
+      }
+      else
+        echo "Please login to play";
+    }
+    ?>
 </html>

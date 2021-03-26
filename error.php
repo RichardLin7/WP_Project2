@@ -68,6 +68,9 @@ function errors() {
 	case "incorrect password":
 	    return "The password does not match your username";
 	    break;
+	case "not login":
+	    return "Please login before play the game";
+	    break;
     default:
 		return "Undefined error";
        }
