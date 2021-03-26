@@ -20,8 +20,6 @@
             <!-- Question Board -->
             <div class="rightcol col">
                 <?php
-
-
                 $file = "./questions.txt";
                 $contents = file_get_contents($file);
                 $subject = $_POST["subject"];
@@ -32,9 +30,8 @@
                 setcookie("answer", $array[2], time() + (3600 * 30), "/");
                 echo $array[1];
                 setcookie("points", $match[0], time() + (3600 * 30), "/");
-                setcookie($array[0], "used", time() + (86400 * 30), "/");
                 ?>
-                <br>
+                <br><br>
                 <form action="./answers.php" method="post">
                 <input type="text" name="input"/>
                 <input type="submit" value="Submit">

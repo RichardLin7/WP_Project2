@@ -12,6 +12,7 @@
         setcookie("player3", 0, time() + (3600 * 30), "/");
         setcookie("player4", 0, time() + (3600 * 30), "/");
         setcookie("points", 0, time() + (3600 * 30), "/");
+        setcookie("used", 1, time() + (86400 * 30), "/");
         setcookie("currentplayer", "player1", time() + (3600 * 30), "/");
         
         // Question Cookies
@@ -63,12 +64,6 @@
                 </p>
                 <br><br>
                 <label>Are you ready?</label>
-            <!-- <strong><label for="section">Number of players</label><br></strong>
-            <select name="section" id="section">
-                 <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-             </select><br><br> -->
                 <input type="submit" value="GO!"/>
             </fieldset>
         </form>
@@ -89,12 +84,7 @@
       return login();}
     elseif(empty($_COOKIE['user'])){
       return login();}
-    else{ return $_COOKIE['user'];
-     // if(!isset($_POST['logintype'])){return login();}
-  //  elseif(empty($_POST['logintype'])){return login();}
-   // elseif(!$_SESSION['directlogin']){return login();}
-  }
-  //  else
+    else{ return $_COOKIE['user'];}
   }
 
 	function login(){
