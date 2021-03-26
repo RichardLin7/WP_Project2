@@ -135,6 +135,7 @@
         setcookie("player3", 0, time() + (3600 * 30), "/");
         setcookie("player4", 0, time() + (3600 * 30), "/");
         setcookie("points", 0, time() + (3600 * 30), "/");
+        setcookie("used", 1, time() + (86400 * 30), "/");
         setcookie("currentplayer", "player1", time() + (3600 * 30), "/");
         
         // Question Cookies
