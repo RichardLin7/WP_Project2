@@ -60,6 +60,14 @@ button:hover {
     cursor: pointer;
 }
 
+.button{
+	background-color: rgba(255,255,255,0.5);
+	font-size: 120%;
+	font-weight: bold;
+	padding: 3%;
+	border-radius: 30px;
+}
+
 a {
 	color: #F44;
 	text-decoration: none;
@@ -128,10 +136,6 @@ input[type="submit"] {
 	padding: 3%;
 	border-radius: 30px;
 }
-input[type="submit"]:disabled {
-	visibility: hidden;
-}
-
 
 legend {
 	background-color: rgba(255,255,255,1);

@@ -6,7 +6,6 @@
 	</head>
 	
 	<body>
-        <?php session_start(); ?>
 		  <div class="topnav">
         <a class="active" href="index.php">Home</a>
         <a href="signup.php">Register</a>

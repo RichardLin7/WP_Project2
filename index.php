@@ -5,11 +5,12 @@
     <link rel="stylesheet" href="./jeopardy.css"/>
   </head>
   <body>
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="signup.php">Register</a>
-            <a href="login.php">Login</a>
-            <a href="about.php">About Us</a>
+        <?php $ret = loginstate();?>
+    <div class="topnav">
+        <a class="active" href="index.php">Home</a>
+        <a href="<?=$ret[2]?>"><?=$ret[0]?></a>
+        <a href="<?=$ret[3]?>"><?=$ret[1]?></a>
+        <a href="about.php">About Us</a>
         </div>
         <div class="center">
             <h1>WEB PROGRAMMING JEOPARDY</h1>
@@ -166,6 +167,19 @@
 
 
     <?php
+    function loginstate(){
+    $logins = false;
+    if(isset($_COOKIE['user']))
+      if(!empty($_COOKIE['user']))
+        $logins = true;
+     if(!$logins){
+           $array = array("Register", "Login","signup.php","login.php");
+     }else{
+           $array = array("Play", "Log out", "home.php", "logout.php");
+     } 
+     return $array;
+  }
+  
     function loginstat(){
       $login = false;
       if(isset($_COOKIE['user'])){
