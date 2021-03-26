@@ -112,15 +112,16 @@
 
        
         $originstring = file_get_contents('users.txt');
-        $data = explode("\r\n",$originstring);
+        $data = explode("\n",$originstring);
 
-        $newuser = $_POST['name'].",".$_POST['type'].",".$_POST['verify'].",".$_POST['pw']."\r\n";
+        $newuser = $_POST['name'].",".$_POST['type'].",".$_POST['verify'].",".$_POST['pw']."\n";
 
           try {
             $finduser = false;
             $passwordmatch = false;
             $verifymatch = false;
         foreach($data as $field){
+          if(!empty($field)){
         $ppl = explode(',',$field);
         if($ppl[0] == $_POST['name']){ 
           $finduser = true;
@@ -129,7 +130,7 @@
             if($ppl[3] == $_POST['pw']){
               $passwordmatch = true;
         setcookie('user',  $_POST['name'], time() + (86400 * 30), "/");	    
-	setcookie("player1", 0, time() + (3600 * 30), "/");
+	      setcookie("player1", 0, time() + (3600 * 30), "/");
         setcookie("player2", 0, time() + (3600 * 30), "/");
         setcookie("player3", 0, time() + (3600 * 30), "/");
         setcookie("player4", 0, time() + (3600 * 30), "/");
@@ -164,6 +165,7 @@
         setcookie("animals500", 0, time() + (86400 * 30), "/");	    
         }}}
         }
+        }
          } catch (Exception $e) {
        echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
@@ -187,7 +189,6 @@
         header("Location: error.php");
         exit();
         }
-			
         return $_POST['name'];
       }
 

@@ -93,9 +93,9 @@
        
         $single = fopen('users.txt','a');
         $originstring = file_get_contents('users.txt');
-        $data = explode("\r\n",$originstring);
+        $data = explode("\n",$originstring);
 
-        $newuser = $_POST['name'].",".$_POST['type'].",".$_POST['verify'].",".$_POST['pw']."\r\n";
+        $newuser = $_POST['name'].",".$_POST['type'].",".$_POST['verify'].",".$_POST['pw']."\n";
 
           try {
         foreach($data as $field){
